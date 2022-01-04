@@ -6,8 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Olá povos!</title>
 </head>
-    <h1>Feliz ano novo!</h1>
+    <h1>App da Auxiliana!</h1>
 <body>
-    
+    <?php
+    require_once "model/Conexao.php";  
+    $tecnologias = Conexao::select("tecnologia","id, nome");
+    print_r($tecnologias);
+    ?>
 </body>
 </html>
